@@ -12,6 +12,6 @@ class AppController extends Controller
 
         $notes = User::find(session('user.user_id'))->notes;
 
-        return view('App.index', ['notes' => $notes]);
+        return view('app.index', ['notes' => $notes]);
     }
 }

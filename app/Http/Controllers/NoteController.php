@@ -13,7 +13,7 @@ class NoteController extends Controller
 
         $notesQuantity = User::find(session('user.user_id'))->notes->count();
 
-        return view('App.create-note', ['notesQuantity' => $notesQuantity]);
+        return view('app.create-note', ['notesQuantity' => $notesQuantity]);
     }
 
     public function createNote(Request $request)
