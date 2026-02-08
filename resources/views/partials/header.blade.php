@@ -23,7 +23,7 @@
                 </div>
             @else
                 <div class="d-flex align-items-center gap-3">
-                   <a href="#" class="btn btn-primary btn-sm shadow-sm">Logout</a>
+                   <a href="{{ route('logout') }}" class="btn btn-primary btn-sm shadow-sm">Logout</a>
                 </div>
             @endif
         </div>
