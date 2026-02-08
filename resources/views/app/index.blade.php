@@ -28,7 +28,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 @foreach($notes as $note)
-                    @include('App.notes')
+                    @include('app.notes')
                 @endforeach
             </div>
         </div>

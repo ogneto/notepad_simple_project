@@ -12,7 +12,7 @@
     @endif
 
     <form action="{{ route('createNote') }}" method="POST">
-        @include('App.create-note-form')
+        @include('app.create-note-form')
     </form>
 
     
