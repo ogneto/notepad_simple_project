@@ -18,7 +18,7 @@
         <div class="alert alert-info" role="alert">
            You don't have any notes yet. Create one to get started.
         </div>
-        <a href="{{ route('login') }}" class="btn btn-primary">Create your first note</a>
+        <a href="{{ route('showCreateNotePage') }}" class="btn btn-primary">Create your first note</a>
 
     @else
         <div class="row justify-content-center">

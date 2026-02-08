@@ -11,7 +11,7 @@
         <a href="{{ route('showEditNotePage', Crypt::encrypt($note->id)) }}" class="btn btn-outline-secondary btn-sm rounded-circle px-2" title="Edit">
             <i class="bi bi-pencil"></i>
         </a>
-        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle px-2" title="Delete">
+        <a href="{{ route('deleteNote', Crypt::encrypt($note->id)) }}" class="btn btn-outline-danger btn-sm rounded-circle px-2" title="Delete">
             <i class="bi bi-trash"></i>
         </a>
     </div>

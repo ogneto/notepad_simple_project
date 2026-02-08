@@ -25,4 +25,6 @@ Route::middleware(CheckIfUserIsNotLogged::class)->group(function () {
 
     Route::get('/edit-note/{id}', [NoteController::class, 'showEditNotePage'])->name('showEditNotePage');
     Route::post('/edit-note/{id}', [NoteController::class, 'updateNote'])->name('updateNote');
+
+    Route::get('/delete-note/{id}', [NoteController::class, 'deleteNote'])->name('deleteNote');
 });

@@ -85,4 +85,23 @@ class NoteController extends Controller
 
         return redirect()->route('indexApp')->with('success', 'Note updated successfully!');
     }
+
+    public function deleteNote($id)
+    {
+        $id = DecryptService::decrypt($id);
+
+        if (!$id) {
+            return redirect()->route('indexApp')->with('error', 'Something went wrong. Please try again.');
+        }
+
+        $note = Note::find($id);
+
+        if (!$note) {
+            return redirect()->route('indexApp')->with('error', 'Something went wrong. Please try again.');
+        }
+
+        $note->delete();
+
+        return redirect()->route('indexApp')->with('success', 'Note deleted successfully!');
+    }
 }
