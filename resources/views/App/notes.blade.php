@@ -1,9 +1,19 @@
-<div class="card">
+<div class="card mb-3 shadow-sm border-0">
   <div class="card-body">
-    <h5 class="card-title">{{ $note->title }}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{ date('d/m/Y H:i:s', strtotime($note->created_at)) }}</h6>
-    <p class="card-text">{{ $note->note }}</p>
-    <a href="#" class="card-link"><i class="bi bi-pencil"></i></a>
-    <a href="#" class="card-link"><i class="bi bi-trash"></i></a>
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="card-title fw-bold text-gradient mb-0">{{ $note->title }}</h5>
+        <small class="text-secondary">{{ date('d/m/Y H:i:s', strtotime($note->created_at)) }}</small>
+    </div>
+    
+    <p class="card-text text-muted mb-4">{{ $note->note }}</p>
+    
+    <div class="d-flex justify-content-end gap-2">
+        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle px-2" title="Edit">
+            <i class="bi bi-pencil"></i>
+        </a>
+        <a href="#" class="btn btn-outline-danger btn-sm rounded-circle px-2" title="Delete">
+            <i class="bi bi-trash"></i>
+        </a>
+    </div>
   </div>
 </div>

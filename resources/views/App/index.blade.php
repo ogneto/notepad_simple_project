@@ -19,12 +19,12 @@
         <a href="{{ route('login') }}" class="btn btn-primary">Create your first note</a>
 
     @else
-        <div class="row">
-            @foreach($notes as $note)
-                <div class="col-md-4 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                @foreach($notes as $note)
                     @include('App.notes')
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     @endif
 
