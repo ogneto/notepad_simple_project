@@ -28,6 +28,12 @@
             @enderror
         </div>
 
+        @if(session('loginError'))
+            <div class="alert alert-danger d-inline-block" role="alert">
+                {{ session('loginError') }}
+            </div>
+            <br>
+        @endif
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 
