@@ -8,7 +8,7 @@
     <p class="card-text text-muted mb-4">{{ $note->note }}</p>
     
     <div class="d-flex justify-content-end gap-2">
-        <a href="#" class="btn btn-outline-secondary btn-sm rounded-circle px-2" title="Edit">
+        <a href="{{ route('showEditNotePage', Crypt::encrypt($note->id)) }}" class="btn btn-outline-secondary btn-sm rounded-circle px-2" title="Edit">
             <i class="bi bi-pencil"></i>
         </a>
         <a href="#" class="btn btn-outline-danger btn-sm rounded-circle px-2" title="Delete">

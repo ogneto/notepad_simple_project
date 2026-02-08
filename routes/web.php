@@ -22,4 +22,7 @@ Route::middleware(CheckIfUserIsNotLogged::class)->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/create-note', [NoteController::class, 'showCreateNotePage'])->name('showCreateNotePage');
     Route::post('/create-note', [NoteController::class, 'createNote'])->name('createNote');
+
+    Route::get('/edit-note/{id}', [NoteController::class, 'showEditNotePage'])->name('showEditNotePage');
+    Route::post('/edit-note/{id}', [NoteController::class, 'updateNote'])->name('updateNote');
 });
