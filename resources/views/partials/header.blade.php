@@ -19,7 +19,7 @@
             
             @if(! session('user'))
                 <div class="d-flex align-items-center gap-3">
-                   <a href="#" class="btn btn-primary btn-sm shadow-sm">Login</a>
+                   <a href="{{ route('login') }}" class="btn btn-primary btn-sm shadow-sm">Login</a>
                 </div>
             @else
                 <div class="d-flex align-items-center gap-3">
