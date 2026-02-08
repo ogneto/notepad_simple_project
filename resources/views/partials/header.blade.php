@@ -7,15 +7,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        @if(session('user'))
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Create Note</a>
-                    </li>
-                </ul>
-            </div>
-        @endif
             
             @if(! session('user'))
                 <div class="d-flex align-items-center gap-3">
@@ -24,6 +15,7 @@
             @else
                 <div class="d-flex align-items-center gap-3">
                    <a href="{{ route('logout') }}" class="btn btn-primary btn-sm shadow-sm">Logout</a>
+                   <a href="{{ route('showCreateNotePage') }}" class="btn btn-primary btn-sm shadow-sm">Create Note</a>
                 </div>
             @endif
         </div>
