@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notepad Project | Modern</title>
+    <title>Notepad Project</title>
 
     @include('templates.imports.default_imports')
 
