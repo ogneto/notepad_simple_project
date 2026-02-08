@@ -15,7 +15,9 @@
 
     @include('partials.header')
 
-    @yield('content')
+    <div class="container py-5">
+        @yield('content')
+    </div>
 
     @include('partials.footer')
 
