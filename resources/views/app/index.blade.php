@@ -12,11 +12,7 @@
 
     <h1>Hello, {{ session('user.username') }}</h1>
 
-    @if(session('success'))
-        <div class="alert alert-success d-inline-block mb-3">
-            {{ session('success') }}
-        </div>
-    @endif
+    @include('app.alerts')
 
     @if(count($notes) == 0) 
         <div class="alert alert-info" role="alert">
